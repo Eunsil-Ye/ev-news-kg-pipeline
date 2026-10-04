@@ -63,7 +63,7 @@ python run_pipeline.py --stage core --stage main
 | 파일 | 입력 → 출력 |
 |---|---|
 | `build_total_vehicle_registration_csv.py` | 자동차등록 원자료 → 월 × 시도 전체 등록 대수 |
-| `38_charger_tables.py` | 충전기 스냅샷 → 표 3.4·3.5와 기준월 목록 |
+| `38_charger_tables.py` | 충전기 스냅샷 → 표 3.4와 기준월 목록 |
 
 ### 2단계 KG 구축과 월별 지표 (4개) — `--stage core`
 
@@ -122,7 +122,7 @@ python run_pipeline.py --stage core --stage main
 |---|---|
 | `19_kg_event_subgraphs.py` | 사건 월 하위그래프, 담론 변화·지표 추이 그림 (그림 5.1) |
 | `32_kg_visualizations.py` | KG 스키마(그림 3.1), 통합 그래프(그림 4.1), 원본 대 정제판 비교 |
-| `40_thesis_event_figures.py` | 2020-10 코나 화재·리콜과 2024-08 인천 화재의 전환점·하위그래프 (그림 5.3·5.4) |
+| `40_thesis_event_figures.py` | 2020-10 코나 화재·리콜과 2024-08 인천 화재의 전환점·하위그래프 (그림 5.2·5.3) |
 
 ## 산출물
 
@@ -138,19 +138,19 @@ python run_pipeline.py --stage core --stage main
 | 논문 | 산출물 | 스크립트 |
 |---|---|---|
 | 표 3.1 | `tbl_media_sentiment.csv` | 26 |
-| 표 3.4, 3.5 | `tbl_charger_national.csv`, `tbl_charger_region.csv` | 38 |
-| 표 3.6, 3.7 | 프레임 사전, 개체 별칭 사전 | `kg_common.py` |
+| 표 3.4 | `tbl_charger_region.csv` (전국 합계는 `tbl_charger_national.csv`) | 38 |
+| 표 3.5, 3.6 | 프레임 사전, 개체 별칭 사전 | `kg_common.py` |
 | 그림 3.1 | `kg_schema.png` | 32 |
 | 그림 4.1 | `kg_corpus_overview.png` | 32 |
 | 그림 5.1 | `discourse_evolution.png`, `kg_indicators_timeline.png` | 19 |
 | 표 5.2 | `tbl_granger.csv` | 18 |
 | 표 5.3 | `tbl_panel_main_effects.csv`, `tbl_panel_lag_joint.csv` | 18 |
 | 표 5.4 | `tbl_granger_corrected.csv` | 20 |
-| 표 5.5, 그림 5.2 | `tbl_var_fevd.csv`, `var_irf.png` | 20 |
+| 표 5.5 | `tbl_var_fevd.csv` | 20 |
 | 표 5.6 | `tbl_national_forecast_4tier.csv`, `tbl_bootstrap_rmse.csv` | 21 |
 | 표 5.7 | `tbl_panel_interactions.csv` | 18 |
-| 표 5.8 | `tbl_breakpoints.csv` | 23 |
-| 그림 5.3, 5.4 | `thesis_breakpoints_two_events.png`, `thesis_event_subgraphs.png` | 40 |
+| 5.8절 전환점 수치 | `tbl_breakpoints.csv` | 23 |
+| 그림 5.2, 5.3 | `thesis_breakpoints_two_events.png`, `thesis_event_subgraphs.png` | 40 |
 | 표 6.1 | `kg_audit_sentiment_*.csv`, `tbl_entity_frame_precision.csv`, `tbl_audit_fp_precision.csv`, `tbl_relevance_classifier.csv`, `tbl_llm_benchmark.csv`, `tbl_sentiment_relabel_benchmark.csv` | 28, 25, 27, 34, 35 |
 | 표 6.2 | `kg_clean_robustness.md`, `tbl_kg_clean_*.csv` | 30 |
 | 표 6.3 | `period_sensitivity.md`, `tbl_period_*.csv` | 33 |
