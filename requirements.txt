@@ -1,0 +1,18 @@
+# Python 3.11.6 에서 검증
+pandas==2.2.3
+numpy==2.2.3
+scipy==1.17.1
+statsmodels==0.14.6
+scikit-learn==1.9.0
+networkx==3.6.1
+matplotlib==3.10.8
+pyvis==0.3.2
+xlrd==2.0.2
+tabulate==0.10.0
+
+# LLM 라벨링(34·36번)을 새로 호출할 때만 필요
+openai==3.19.2
+
+# BERT 비교(24번)를 실행할 때만 필요
+transformers==5.4.0
+torch==2.11.0
